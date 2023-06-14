@@ -1,0 +1,38 @@
+CONFIG_NAME: 'ControlGAN'
+
+DATASET_NAME: 'affectnet'
+DATA_DIR: "../data/affectnet/"
+GPU_ID: 0
+WORKERS: 4
+
+
+TREE:
+    BRANCH_NUM: 3
+
+TRAIN:
+    FLAG: True
+    NET_G: "/home/prmi/FWW/ControlGAN-master/output/affectnet_ControlGAN_2023_03_22_16_00_42/Model/netG_epoch_195.pth"   #"/home/prmi/FWW/ControlGAN-master/output/affectnet_ControlGAN_2023_02_15_16_13_25/Model/netG_epoch_430.pth" 
+    B_NET_D: True
+    BATCH_SIZE: 16
+    MAX_EPOCH: 600
+    SNAPSHOT_INTERVAL: 5 
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    # NET_E: '../DAMSMencoders/celebaandaffectnet/text_encoder550.pth'
+    NET_E: "../DAMSMencoders/affectnet/text_encoder550.pth"
+    SMOOTH:
+        GAMMA1: 4.0 
+        GAMMA2: 5.0
+        GAMMA3: 10.0  
+        LAMBDA: 5.0
+
+
+GAN:
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
