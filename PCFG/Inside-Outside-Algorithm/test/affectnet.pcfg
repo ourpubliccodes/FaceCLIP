@@ -1,0 +1,67 @@
+S->NP VP 1.0
+NP->Det Gender 0.5
+NP->PN 0.5
+VP->Wearing PN Are PN HaveWith 0.166
+VP->Wearing PN HaveWith PN Are 0.166
+VP->Are PN Wearing PN HaveWith 0.166
+VP->Are PN HaveWith PN Wearing 0.166
+VP->HaveWith PN Wearing PN Are 0.166
+VP->HaveWith PN Are PN Wearing 0.166
+Wearing->WearVerb WearAttributes 1.0
+Are->IsVerb IsAttributes 1.0
+HaveWith->HaveVerb HaveAttributes 1.0
+Det->a 0.5
+Det->the 0.5
+Gender->man 0.75
+Gender->woman 0.75
+Gender->person 0.25
+PN->he 1.0
+PN->she 1.0
+WearVerb->wears 0.5
+WearVerb->is wearing 0.5
+WearAttributes->earrings 1.0
+WearAttributes->hat 1.0
+WearAttributes->lipstick 1.0
+WearAttributes->necklace 1.0
+WearAttributes->necktie 1.0
+WearAttributes->eyeglasses 1.0
+WearAttributes->heavy makeup 1.0
+IsVerb->is 1.0
+IsAttributes->attractive 1.0
+IsAttributes->young 1.0
+IsAttributes->chubby 1.0
+IsAttributes->bald 1.0
+IsAttributes->smiling 1.0
+IsAttributes->neutral 1.0
+IsAttributes->happy 1.0
+IsAttributes->sad 1.0
+IsAttributes->surprised 1.0
+IsAttributes->fear 1.0
+IsAttributes->disgusted 1.0
+IsAttributes->anger 1.0
+HaveVerb->has 1.0
+HaveAttributes->pale skin 1.0
+HaveAttributes->oval face 1.0
+HaveAttributes->arched eyebrows 1.0
+HaveAttributes->bushy eyebrows 1.0
+HaveAttributes->bags under eyes 1.0
+HaveAttributes->narrow eyes 1.0
+HaveAttributes->high cheekbones 1.0
+HaveAttributes->rosy cheeks 1.0
+HaveAttributes->pointy nose 1.0
+HaveAttributes->big nose 1.0
+HaveAttributes->mouth slightly open 1.0
+HaveAttributes->big lips 1.0
+HaveAttributes->beard 1.0
+HaveAttributes->goatee 1.0
+HaveAttributes->mustache 1.0
+HaveAttributes->double chin 1.0
+HaveAttributes->receding hairline 1.0
+HaveAttributes->bangs 1.0
+HaveAttributes->sideburns 1.0
+HaveAttributes->straight hair 1.0
+HaveAttributes->wavy hair 1.0
+HaveAttributes->blond hair 1.0
+HaveAttributes->black hair 1.0
+HaveAttributes->brown hair 1.0
+HaveAttributes->gray hair 1.0
