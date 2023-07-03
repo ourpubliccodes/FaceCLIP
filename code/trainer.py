@@ -52,7 +52,7 @@ def get_log(file_name):
     logger.addHandler(ch)
     return logger
 
-logger = get_log('/home/prmi/FWW/ControlGAN-master/output/log.txt')
+logger = get_log('../output/log.txt')
 
 
 def display_loss(data_dir, max_epoch):
@@ -407,22 +407,6 @@ class condGANTrainer(object):
                     generator_loss(netsD, image_encoder, fake_imgs, real_labels,
                                    words_embs, sent_emb, match_labels, cap_lens, class_ids, style_loss, imgs)
                 kl_loss = KL_loss(mu, logvar)
-                ####### clip loss  ######
-                # temp_clip_loss = 0.0
-                # for i in range(len(netsD)):
-                #     loss_clip = 0.0
-                #     for index_sec in range(len(sec_list)):
-                #         text_input = torch.cat([clip.tokenize(sec_list[index_sec])]).cuda()
-                #         text_feature = self.clip_loss.model.encode_text(text_input)
-                #         tensor_img_to_PIL = ToPILImage()(fake_imgs[i][index_sec])
-                #         image_input = self.clip_loss.preprocess(tensor_img_to_PIL).unsqueeze(0).to("cuda")
-                #         image_feature = self.clip_loss.model.encode_image(image_input)  # [B, 512]
-                #         sim = F.cosine_similarity(text_feature, image_feature)  # 相似度，越大越好
-                #         loss_clip = loss_clip + (1 - sim)
-                #     loss_clip = (loss_clip / (batch_size * 1.0))[0]
-                #     temp_clip_loss += loss_clip
-                # errG_total += temp_clip_loss / 3.
-                # G_logs += 'clip_loss: %.2f ' % (temp_clip_loss / 3.)
 
                 errG_total += kl_loss
                 G_logs += 'kl_loss: %.2f ' % kl_loss
@@ -462,7 +446,7 @@ class condGANTrainer(object):
 
         self.save_model(netG, avg_param_G, netsD, self.max_epoch)
 
-        display_loss("/home/prmi/FWW/ControlGAN-master/output/log.txt",self.max_epoch)
+        display_loss("../output/log.txt",self.max_epoch)
 
     def save_singleimages(self, images, filenames, save_dir, split_dir, sentenceID=0):
         for i in range(images.size(0)):
@@ -594,6 +578,7 @@ class condGANTrainer(object):
                             R[R_count] = 1
                         R_count += 1
 
+                    ####### R-precision #########
                     if R_count >= 30000:
                         sum = np.zeros(10)
                         np.random.shuffle(R)
@@ -601,7 +586,7 @@ class condGANTrainer(object):
                             sum[i] = np.average(R[i * 3000:(i + 1) * 3000 - 1])
                         R_mean = np.average(sum)
                         R_std = np.std(sum)
-                        print("R mean:{:.4f} std:{:.4f}".format(R_mean, R_std))
+                        print("R mean:{:.4f} std:{:.4f}".format(R_mean, R_std)) ## output r-precision 
                         cont = False
 
     def gen_description(self, data_dic, juzi):
@@ -679,9 +664,6 @@ class condGANTrainer(object):
                     ##################################
                     # filter by CLIP
                     ##################################
-
-                    # clip_x_recon = F.interpolate(x_recon, 224, mode='bilinear')
-
                     img_embeddings = []
                     for t in range(imgs_per_sent):
                         tensor_img_to_PIL = ToPILImage()(x_recon[t][0])
