@@ -1,4 +1,4 @@
-CONFIG_NAME: 'ControlGAN'
+CONFIG_NAME: 'FaceCLIP'
 
 DATASET_NAME: 'affectnet'
 DATA_DIR: "../data/affectnet/"
@@ -11,14 +11,13 @@ TREE:
 
 TRAIN:
     FLAG: True
-    NET_G: "/home/prmi/FWW/ControlGAN-master/output/affectnet_ControlGAN_2023_03_22_16_00_42/Model/netG_epoch_195.pth"   #"/home/prmi/FWW/ControlGAN-master/output/affectnet_ControlGAN_2023_02_15_16_13_25/Model/netG_epoch_430.pth" 
+    NET_G: "./output/affectnet_FaceCLIP_2023_03_22_16_00_42/Model/netG_epoch_120.pth"
     B_NET_D: True
     BATCH_SIZE: 16
     MAX_EPOCH: 600
     SNAPSHOT_INTERVAL: 5 
     DISCRIMINATOR_LR: 0.0002
     GENERATOR_LR: 0.0002
-    # NET_E: '../DAMSMencoders/celebaandaffectnet/text_encoder550.pth'
     NET_E: "../DAMSMencoders/affectnet/text_encoder550.pth"
     SMOOTH:
         GAMMA1: 4.0 
