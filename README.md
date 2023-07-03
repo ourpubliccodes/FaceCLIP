@@ -13,11 +13,11 @@ Wenwen Fu, [Wenjuan Gong](https://www.wenjuangong.com/), Chenyang Yu, Wei Wang, 
 2. Preprocess the facial images from [AffectNet] dataset and save the images to `data/affectnet/image/`
 3. Preprocess the facial images from [RAF-DB] dataset and save the images to `data/affectnet/image/`
    ```
-    python crop_alignface/align_images.py  //crop and align
+    python crop_alignface/align_images.py  //crop and align facial expression images
     ```
 4. Based on the annotated attribute excel data/affectnet/affect_attributes.xlsx, we generated 10 different texts per image. Download these texts from the [link](https://pan.baidu.com/s/1PsxyCYZNhWv89VGbZtLZfg?pwd=face), and save them into `data/affectnet/text/`.
    ```
-    python PCFG/Inside-Outside-Algorithm/train.py  //generate texts for images
+    python PCFG/Inside-Outside-Algorithm/train.py  //generate 10 different texts for each image in FET dataset
     ``` 
 
 ### Training
@@ -41,8 +41,8 @@ python main.py --cfg cfg/train_affectnet.yml --gpu 1
 #### Pretrained DAMSM Model
 - [DAMSM for affectnet](https://pan.baidu.com/s/1E2qtCxeD42Pro7_g8PlbYw?pwd=face). Download and save it to `DAMSMencoders/`
 #### Pretrained FaceCLIP Model
-- [FaceCLIP for affectnet](https://pan.baidu.com/s/1b6_SEomQs2joISZ9qy5F_Q?pwd=face). Download and save it to `models/`
-
+- [FaceCLIP for affectnet](https://pan.baidu.com/s/1b6_SEomQs2joISZ9qy5F_Q?pwd=face). Download and save it to `models/` or `output/'
+(You may need to modify the path in the .yaml file to suit your situation)
 ### Testing
 - Test ControlGAN model for FET dataset:
 ```
