@@ -15,7 +15,7 @@ Wenwen Fu, [Wenjuan Gong](https://www.wenjuangong.com/), Chenyang Yu, Wei Wang, 
    ```
     python crop_alignface/align_images.py  //crop and align
     ```
-4. Based on the annotated attribute excel data/affectnet/affect_attributes.xlsx, we generated 10 different texts per image. Download these texts from the [link](http://mohammadmahoor.com/affectnet/), and save them into `data/affectnet/text/`.
+4. Based on the annotated attribute excel data/affectnet/affect_attributes.xlsx, we generated 10 different texts per image. Download these texts from the [link](https://pan.baidu.com/s/1PsxyCYZNhWv89VGbZtLZfg?pwd=face), and save them into `data/affectnet/text/`.
    ```
     python PCFG/Inside-Outside-Algorithm/train.py  //generate texts for images
     ``` 
@@ -39,7 +39,7 @@ python main.py --cfg cfg/train_affectnet.yml --gpu 1
 
 
 #### Pretrained DAMSM Model
-- [DAMSM for affectnet](https://drive.google.com/file/d/1dbdCgaYr3z80OVvISTbScSy5eOSqJVxv/view?usp=sharing). Download and save it to `DAMSMencoders/`
+- [DAMSM for affectnet](https://pan.baidu.com/s/1E2qtCxeD42Pro7_g8PlbYw?pwd=face). Download and save it to `DAMSMencoders/`
 #### Pretrained FaceCLIP Model
 - [FaceCLIP for affectnet](https://pan.baidu.com/s/1b6_SEomQs2joISZ9qy5F_Q?pwd=face). Download and save it to `models/`
 
