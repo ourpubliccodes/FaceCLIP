@@ -11,7 +11,7 @@ TREE:
 
 TRAIN:
     FLAG: True
-    NET_G: "./output/affectnet_FaceCLIP_2023_03_22_16_00_42/Model/netG_epoch_120.pth"
+    NET_G: "../output/affectnet_FaceCLIP_2023_03_22_16_00_42/Model/netG_epoch_120.pth"
     B_NET_D: True
     BATCH_SIZE: 16
     MAX_EPOCH: 600
