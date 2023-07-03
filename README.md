@@ -41,7 +41,7 @@ python main.py --cfg cfg/train_affectnet.yml --gpu 1
 #### Pretrained DAMSM Model
 - [DAMSM for affectnet](https://drive.google.com/file/d/1dbdCgaYr3z80OVvISTbScSy5eOSqJVxv/view?usp=sharing). Download and save it to `DAMSMencoders/`
 #### Pretrained FaceCLIP Model
-- [ControlGAN for affectnet](https://drive.google.com/file/d/1g1Kx5-hUXfJOGlw2YK3oVa5C9IoQpnA_/view?usp=sharing). Download and save it to `models/`
+- [FaceCLIP for affectnet](https://pan.baidu.com/s/1OrRagcWC4QD6rvpiNv-BIA  face). Download and save it to `models/`
 
 ### Testing
 - Test ControlGAN model for FET dataset:
