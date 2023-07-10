@@ -1,7 +1,7 @@
 CONFIG_NAME: 'DAMSM'
 
 DATASET_NAME: 'affectnet'
-DATA_DIR: "/home/prmi/FWW/ControlGAN-master/data/affectnet/"
+DATA_DIR: "../data/affectnet/"
 GPU_ID: 0
 WORKERS: 1
 
