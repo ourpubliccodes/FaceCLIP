@@ -4,8 +4,8 @@ Pytorch implementation for Facial Expression Genaration from Text with CLIP. The
 ### Overview
 <img src="archi.png" width="900px" height="248px"/>
 
-**[Facial Expression Genaration from Text with CLIP].**  
-Wenwen Fu, [Wenjuan Gong](https://www.wenjuangong.com/), Chenyang Yu, Wei Wang, Jordi Gonzalez.
+**[Facial Expression Genaration from Text with FaceCLIP].**  
+
 
 ### Data
 
